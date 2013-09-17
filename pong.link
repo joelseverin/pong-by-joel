@@ -1,0 +1,2 @@
+[objects]
+pong.obj
