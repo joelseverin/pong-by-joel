@@ -628,6 +628,7 @@
     bpl + ; (check above paddle)
     clc ; Need to add paddle height to check belowWe don't have to worry about its visual width here.
     adc #32.w ; @todo: break out to constant
+    cmp $01, S ; Compare with the new ball Y
     bmi + ; (check below paddle)
     bra +++ ; (all clear)
     +: ; Means we had a paddle miss
@@ -643,6 +644,7 @@
     bpl + ; (check above paddle)
     clc ; Need to add paddle height to check below
     adc #32.w ; @todo: break out to constant
+    cmp $01, S ; Compare with the new ball Y
     bmi + ; (check below paddle)
     bra +++ ; (all clear)
     +: ; Means we had a paddle miss
